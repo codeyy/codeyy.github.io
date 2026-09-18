@@ -117,3 +117,70 @@ contactForm.addEventListener('submit', (e) => {
     formResponse.textContent = '> Transmission received! Thank you for reaching out. I will respond promptly.';
     contactForm.reset();
 });
+
+
+const form = document.getElementById('portfolio-contact-form');
+const submitBtn = document.getElementById('psf-submit-btn');
+const nameInput = document.getElementById('pcf-1');
+const emailInput = document.getElementById('pcf-2');
+const subjectInput = document.getElementById('pcf-3');
+const messageInput = document.getElementById('pcf-4');
+
+
+nameInput.addEventListener('input', () => {
+    if(nameInput.value != '' && /^[A-Za-z\s]+$/.test(nameInput.value)) {
+        submitBtn.disabled = false;
+        nameInput.style.borderColor = '';
+    } else {
+        submitBtn.disabled = true;
+        nameInput.style.borderColor = 'red';
+    }
+});
+emailInput.addEventListener('input', () => {
+    if(emailInput.value != '' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+        submitBtn.disabled = false;
+        emailInput.style.borderColor = '';
+    } else {
+        submitBtn.disabled = true;
+        emailInput.style.borderColor = 'red';
+    }
+});
+subjectInput.addEventListener('input', () => {  
+    if(subjectInput.value !='') {
+        submitBtn.disabled = false;
+        subjectInput.style.borderColor = '';
+    } else {
+        submitBtn.disabled = true;
+        subjectInput.style.borderColor = 'red';
+    }
+});
+messageInput.addEventListener('input', () => {
+    if(messageInput.value !='') {
+        submitBtn.disabled = false;
+        messageInput.style.borderColor = '';
+    } else {
+        submitBtn.disabled = true;
+        messageInput.style.borderColor = 'red';
+    }
+})
+
+
+function updateTime() {
+            // Create a new date object for the current time
+            const now = new Date();
+
+            // Format the time using Intl.DateTimeFormat for a specific timezone
+            const formatter = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'Asia/Calcutta', // Specify your target IANA timezone here
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            });
+            const timeString = "Current Time: " + formatter.format(now);
+            document.getElementById('current-time').textContent = timeString;
+        }
+
+        // Update the time immediately and then every second
+        updateTime();
+        setInterval(updateTime, 1000);
