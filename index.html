@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth no-scrollbar">
 <head>
     <meta charset="UTF-8">
     <!-- Prevent light-mode flash: run before anything paints -->
@@ -13,9 +13,7 @@
         })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agam K. | Full Stack Engineer & Systems Architect</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Agam K. | Software Engineer</title>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Google Fonts -->
@@ -23,42 +21,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="output.css">
-    <script>
-        // Tailwind config must run before the CDN script scans the page,
-        // so it stays inline here rather than in the external script.js
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0fdf4',
-                            500: '#22c55e',
-                            600: '#16a34a',
-                            900: '#14532d',
-                            accent: '#6366f1',
-                            cyan: '#06b6d4',
-                        },
-                        dark: {
-                            bg: '#0a0d14',
-                            card: '#121723',
-                            border: '#1f293d',
-                            hover: '#1a2234'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['Fira Code', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
-<body class="bg-white text-gray-900 dark:bg-dark-bg dark:text-gray-200 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-black transition-colors duration-300">
 
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-dark-bg/80 border-b border-gray-200 dark:border-dark-border transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<body class="bg-white text-gray-900 dark:bg-dark-bg dark:text-gray-200 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-black transition-colors duration-300 no-scrollbar">
+
+    <header class="glassmorphism sticky top-0  z-50 backdrop-blur-md bg-white/80 dark:bg-dark-bg/80 border-b border-gray-200 dark:border-dark-border transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
                 <a href="#" class="flex items-center space-x-2 group">
@@ -108,29 +77,24 @@
         </div>
     </header>
 
-    <main class="flex-grow">
-        <section id="about" class="py-20 md:py-32 relative overflow-hidden">
+    <main class="scroll-container grow no-scrollbar">
+        <section id="about" class="vignette-section scroll-fade bg-linear-to-r from-[#8B5CF6] via-[#EC4899] to-[#F43F5E] dark:from-[#0f172a] dark:via-[#1e293b] dark:to-[#dc2626]  panel top-0 py-20 md:py-32 relative overflow-hidden">
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.05),transparent_50%)]"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
-                    <!-- Bio Content -->
                     <div class="lg:col-span-7 space-y-6 text-left">
                         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 dark:text-brand-500 text-xs font-mono">
                             <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
                             <span>Available for strategic engineering roles</span>
                         </div>
-                        
                         <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight">
-                            Building scalable <br/>
+                            Building scalable <br>
                             <span class="gradient-text">digital platforms & systems.</span>
                         </h1>
-                        
                         <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
                             Full-stack engineer specializing in high-performance cloud architectures, distributed backend APIs, and modern responsive frontends. Translating complex engineering problems into clean, reliable code.
                         </p>
 
-                        <!-- CTA Actions -->
                         <div class="flex flex-wrap gap-4 pt-2">
                             <a href="#projects" class="px-6 py-3 rounded-lg bg-brand-500 hover:bg-brand-600 text-black font-semibold transition-all flex items-center space-x-2 shadow-lg shadow-brand-500/20">
                                 <span>Explore Work</span>
@@ -145,8 +109,8 @@
                         <!-- Stats Row -->
                         <div class="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 dark:border-dark-border/60">
                             <div>
-                                <p class="text-2xl font-bold font-mono text-gray-900 dark:text-white">2+ Years</p>
-                                <p class="text-xs text-gray-500 mt-1"> Tech Exp</p>
+                                <p class="text-2xl font-bold font-mono text-gray-900 dark:text-white">1+ Years</p>
+                                <p class="text-xs text-gray-500 mt-1"> Tech Experience</p>
                             </div>
                             <div>
                                 <p class="text-2xl font-bold font-mono text-gray-900 dark:text-white">3+</p>
@@ -172,8 +136,7 @@
                                 <span class="font-mono text-xs text-gray-500">Terminal-</span>
                                 <i data-lucide="terminal" class="w-4 h-4 text-gray-500 dark:text-gray-600"></i>
                             </div>
-                            
-                            <!-- Editor Content -->
+
                             <div class="p-5 font-mono text-sm leading-relaxed text-gray-700 dark:text-gray-300 space-y-2 overflow-x-auto">
                                 <p><span class="text-purple-600 dark:text-purple-400">const</span> <span class="text-blue-600 dark:text-blue-400">engineer</span> = {</p>
                                 <p class="pl-4"><span class="text-gray-500 dark:text-gray-400">name:</span> <span class="text-green-600 dark:text-green-400">'Agam K.'</span>,</p>
@@ -200,7 +163,7 @@
             </div>
         </section>
 
-        <section id="skills" class="py-20 bg-gray-100/60 dark:bg-dark-card/40 border-y border-gray-200 dark:border-dark-border">
+        <section id="skills" class="scroll-fade bg-gradient-to-tl to-[#8B5CF6] via-[#EC4899] from-[#F43F5E] dark:to-[#6F00FF] dark:via-[#1e046ab8] dark:from-[#8B0000]  vignette-section panel py-20 bg-gray-100/60 dark:bg-dark-card/40 border-y border-gray-200 dark:border-dark-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">
                     <h2 class="text-3xl font-bold text-gray-900 dark:text-white tracking-tight">Technical Competencies</h2>
@@ -219,48 +182,59 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="skills-grid">
                     
                     <!-- Skill Item 1 -->
-                    <div class="skill-item bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 transition-all hover:border-brand-500/50" data-category="frontend">
+                    <div class="skill-item bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 transition-all hover:border-brand-500/50" data-category="backend">
                         <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4">
                             <i data-lucide="code" class="w-5 h-5"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">TypeScript / JavaScript</h3>
-                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Strict typing, ESNext, Async Pipelines</p>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Python, C/C++, Security</h3>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Strict typing, Memory Management &amp; Application Security</p>
                     </div>
 
                     <!-- Skill Item 2 -->
-                    <div class="skill-item bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 transition-all hover:border-brand-500/50" data-category="frontend">
+                    <div class="skill-item bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 transition-all hover:border-brand-500/50" data-category="backend">
                         <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-600 dark:text-cyan-400 mb-4">
-                            <i data-lucide="layout" class="w-5 h-5"></i>
+                            <i data-lucide="server" class="w-5 h-5"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">React & Next.js</h3>
-                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">SSR, Hydration, State Management</p>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">FastAPI, Pydantic &amp; Flask</h3>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">RESTful APIs, Data Validation &amp; Web Development</p>
                     </div>
 
                     <!-- Skill Item 3 -->
                     <div class="skill-item bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 transition-all hover:border-brand-500/50" data-category="backend">
                         <div class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center text-green-600 dark:text-green-400 mb-4">
-                            <i data-lucide="server" class="w-5 h-5"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Node.js & Go</h3>
-                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">REST APIs, Microservices, Concurrency</p>
-                    </div>
-
-                    <!-- Skill Item 4 -->
-                    <div class="skill-item bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 transition-all hover:border-brand-500/50" data-category="backend">
-                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-4">
                             <i data-lucide="database" class="w-5 h-5"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">PostgreSQL & Redis</h3>
-                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Schema Design, Indexing, Caching</p>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">DBMS, MySQL &amp; SQLAlchemy</h3>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Database Design, Query Optimization &amp; ORM</p>
+                    </div>
+                    <div class="skill-item bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 transition-all hover:border-brand-500/50" data-category="backend">
+                        <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center text-red-600 dark:text-red-400 mb-4">
+                            <i data-lucide="shield-check" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Web Security</h3>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Bot Protection, JWT &amp; Rate Limiting</p>
                     </div>
 
-                    <!-- Skill Item 5 -->
+                    <div class="skill-item bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 transition-all hover:border-brand-500/50" data-category="frontend">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-4">
+                            <i data-lucide="triangle" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">HTML, CSS &amp; JavaScript</h3>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Responsive Design, Interactive Elements, Raw Frontend Development &amp; Holy Trinity</p>
+                    </div>
+                    <div class="skill-item bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 transition-all hover:border-brand-500/50" data-category="frontend">
+                        <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-600 dark:text-pink-400 mb-4">
+                            <i data-lucide="palette" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Tailwind CSS, Bootstrap &amp; AI</h3>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">CSS Frameworks, Design Systems &amp; Artificial Intelligence Integration</p>
+                    </div>
                     <div class="skill-item bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 transition-all hover:border-brand-500/50" data-category="devops">
                         <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-4">
                             <i data-lucide="cloud" class="w-5 h-5"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Docker & Kubernetes</h3>
-                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Containerization, Orchestration</p>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Docker &amp; GHCR </h3>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Containerization, Image Management &amp; Registry Operations</p>
                     </div>
 
                     <!-- Skill Item 6 -->
@@ -269,32 +243,19 @@
                             <i data-lucide="git-branch" class="w-5 h-5"></i>
                         </div>
                         <h3 class="text-lg font-bold text-gray-900 dark:text-white">CI/CD Pipelines</h3>
-                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">GitHub Actions, Automated Testing</p>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">GitHub Actions &amp; Automated Testing</p>
                     </div>
 
                     <!-- Skill Item 7 -->
-                    <div class="skill-item bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 transition-all hover:border-brand-500/50" data-category="frontend">
-                        <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-600 dark:text-pink-400 mb-4">
-                            <i data-lucide="palette" class="w-5 h-5"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Tailwind CSS</h3>
-                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Design Systems, Responsive Layouts</p>
-                    </div>
 
                     <!-- Skill Item 8 -->
-                    <div class="skill-item bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 transition-all hover:border-brand-500/50" data-category="backend">
-                        <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center text-red-600 dark:text-red-400 mb-4">
-                            <i data-lucide="shield-check" class="w-5 h-5"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Web Security</h3>
-                        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">OAuth2, JWT, Rate Limiting, HTTPS</p>
-                    </div>
 
                 </div>
             </div>
         </section>
-
-        <section id="projects" class="py-20">
+        <section id="projects" class="scroll-fade vignette-section
+        bg-gradient-to-br from-[#22c55e] via-[#06b6d4] to-[#6366f1] dark:from-[#6F00FF] dark:via-[#003c9759] dark:to-[#6365f1c0]
+        panel py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
                     <div>
@@ -304,25 +265,24 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
                     <!-- Project 1 -->
                     <div class="bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl overflow-hidden flex flex-col hover:border-gray-300 dark:hover:border-gray-700 transition-all group">
                         <div class="h-48 bg-gray-200 dark:bg-gray-800 relative overflow-hidden">
-                            <img src="https://placehold.co/600x400/1f293d/22c55e?text=Metrics+Platform" alt="Telemetry Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/121723/ffffff?text=Project+Preview'">
-                            <div class="absolute top-3 right-3 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-mono text-brand-600 dark:text-brand-500 border border-gray-200 dark:border-dark-border">
-                                Node.js / Go
-                            </div>
+                            <img src="https://placehold.co/600x400/1f293d/22c55e?text=Password+Manager" alt="Password Manager" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/121723/ffffff?text=Project+Preview'">
+                                <div class="absolute top-3 right-3 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-mono text-brand-600 dark:text-brand-500 border border-gray-200 dark:border-dark-border">
+                                    Python / FastAPI
+                                </div>
                         </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div class="p-6 grow flex flex-col justify-between space-y-4">
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-500 transition-colors">Distributed Metrics Engine</h3>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-500 transition-colors">Password Manager</h3>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm mt-2 line-clamp-3">
-                                    High-throughput telemetry collector designed to ingest system analytics with low latency processing and real-time WebSocket dashboard outputs.
+                                    Full-stack Password Manager web application built with FastAPI. Features include, Secure password management, Password strength tester, Hashing, Hash verification ,etc
                                 </p>
                             </div>
                             <div class="pt-4 border-t border-gray-200 dark:border-dark-border/60 flex items-center justify-between text-xs font-mono">
-                                <span class="text-gray-500">v2.1.0 Released</span>
-                                <a href="#" class="text-brand-600 dark:text-brand-500 hover:text-brand-cyan flex items-center space-x-1">
+                                <span class="text-gray-500">Web Application</span>
+                                <a href="https://github.com/codeyy/Password-Manager-PRO" target="_blank" class="text-brand-600 dark:text-brand-500 hover:text-brand-cyan flex items-center space-x-1">
                                     <span>Code Repo</span>
                                     <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                                 </a>
@@ -333,22 +293,22 @@
                     <!-- Project 2 -->
                     <div class="bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl overflow-hidden flex flex-col hover:border-gray-300 dark:hover:border-gray-700 transition-all group">
                         <div class="h-48 bg-gray-200 dark:bg-gray-800 relative overflow-hidden">
-                            <img src="https://placehold.co/600x400/1f293d/06b6d4?text=Cloud+IDE+Core" alt="Cloud IDE" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/121723/ffffff?text=Project+Preview'">
+                            <img src="https://placehold.co/600x400/1f293d/06b6d4?text=GitHub+Profile+Evaluator" alt="GitHub Profile Evaluator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/121723/ffffff?text=Project+Preview'">
                             <div class="absolute top-3 right-3 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-mono text-brand-cyan border border-gray-200 dark:border-dark-border">
-                                React / WebSockets
+                                &lt; Python &gt;
                             </div>
                         </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div class="p-6 grow flex flex-col justify-between space-y-4">
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-cyan transition-colors">Collaborative Cloud Studio</h3>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-cyan transition-colors">GitHub Profile Evaluator</h3>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm mt-2 line-clamp-3">
-                                    In-browser editor supporting real-time collaborative pair programming, inline syntax highlight parsing, and containerized runtime sandboxes.
+                                    Evaluates GitHub profiles using hiring-focused signals like execution, consistency, communication, and growth.
                                 </p>
                             </div>
                             <div class="pt-4 border-t border-gray-200 dark:border-dark-border/60 flex items-center justify-between text-xs font-mono">
                                 <span class="text-gray-500">Live Web App</span>
-                                <a href="#" class="text-brand-cyan hover:text-brand-500 flex items-center space-x-1">
-                                    <span>Launch Demo</span>
+                                <a href="https://github.com/codeyy/GitHub-Profile-Evaluator" target="_blank" class="text-brand-cyan hover:text-brand-500 flex items-center space-x-1">
+                                    <span>Code Repository</span>
                                     <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                                 </a>
                             </div>
@@ -358,22 +318,22 @@
                     <!-- Project 3 -->
                     <div class="bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl overflow-hidden flex flex-col hover:border-gray-300 dark:hover:border-gray-700 transition-all group">
                         <div class="h-48 bg-gray-200 dark:bg-gray-800 relative overflow-hidden">
-                            <img src="https://placehold.co/600x400/1f293d/6366f1?text=API+Gateway" alt="API Gateway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/121723/ffffff?text=Project+Preview'">
+                            <img src="https://placehold.co/600x400/1f293d/6366f1?text=Chat-Server" alt="Chat-Server" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/121723/ffffff?text=Project+Preview'">
                             <div class="absolute top-3 right-3 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-mono text-brand-accent border border-gray-200 dark:border-dark-border">
-                                PostgreSQL / Redis
+                                C++/Python
                             </div>
                         </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div class="p-6 grow flex flex-col justify-between space-y-4">
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-accent transition-colors">Auth & Rate-Limit Middleware</h3>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-accent transition-colors">Chat-Server</h3>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm mt-2 line-clamp-3">
-                                    Microservice API gateway implementing token bucket rate limiting, zero-trust JWT verification, and automated request logging.
+                                    A C++/Python based Chat Server and web application that handles multiple client connections, message routing, and real-time communication.
                                 </p>
                             </div>
                             <div class="pt-4 border-t border-gray-200 dark:border-dark-border/60 flex items-center justify-between text-xs font-mono">
                                 <span class="text-gray-500">Open Source Package</span>
-                                <a href="#" class="text-brand-accent hover:text-brand-500 flex items-center space-x-1">
-                                    <span>Documentation</span>
+                                <a href="https://github.com/codeyy/Chat-Server" target="_blank" class="text-brand-accent hover:text-brand-500 flex items-center space-x-1">
+                                    <span>Code Repository</span>
                                     <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                                 </a>
                             </div>
@@ -384,7 +344,9 @@
             </div>
         </section>
 
-        <section id="interactive" class="py-20 bg-gray-100/60 dark:bg-dark-card/40 border-y border-gray-200 dark:border-dark-border">
+        <section id="interactive" class=" scroll-fade vignette-section
+        bg-linear-to-bl from-[#8a24ff] via-[#0a009960] to-[#0056f7] dark:from-[#6F00FF] dark:via-[#1e046ab8] dark:to-[#8B0000] 
+        snow-section panel py-20 bg-gray-100/60 dark:bg-dark-card/40 border-y border-gray-200 dark:border-dark-border">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-8">
                     <h2 class="text-3xl font-bold text-gray-900 dark:text-white tracking-tight">Interactive Terminal Preview</h2>
@@ -400,21 +362,21 @@
                         </div>
                         <span class="text-xs text-gray-500">bash — 80x24</span>
                     </div>
-                    
                     <div id="terminal-body" class="p-4 h-64 overflow-y-auto space-y-2 text-gray-700 dark:text-gray-300">
                         <p class="text-gray-500">Welcome to Agam K. CLI v1.0.0. Type <span class="text-brand-600 dark:text-brand-500 font-bold">'help'</span> for available commands.</p>
                     </div>
 
                     <!-- Input Form -->
                     <form id="terminal-form" class="bg-gray-100 dark:bg-dark-bg border-t border-gray-200 dark:border-dark-border p-3 flex items-center">
-                        <span class="text-brand-600 dark:text-brand-500 mr-2 font-bold">&gt;</span>
-                        <input type="text" id="terminal-input" autocomplete="off" placeholder="Try 'skills', 'about', or 'contact'..." class="bg-transparent border-none outline-none flex-grow text-gray-800 dark:text-gray-200 font-mono text-sm focus:ring-0">
+                        <span class="text-brand-600 dark:text-brand-500 mr-2 font-bold animate-ping">&gt;</span>
+                        <input type="text" id="terminal-input" autocomplete="off" placeholder="Try 'skills', 'about', or 'shortcuts'..." class="bg-transparent border-none outline-none grow text-gray-800 dark:text-gray-200 font- text-sm focus:ring-0 ">
+                        <button type="submit" style="display: none;"></button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="py-20">
+        <section id="contact" class="scroll-fade bg-gradient-to-r from-[#F43F5E] via-[#EC4899] to-[#8B5CF6]  dark:from-[#dc2626] dark:via-[#1e293b] dark:to-[#0f172a] panel py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     
@@ -425,22 +387,25 @@
                             Whether discussing architecture strategy, new engineering endeavors, or technical inquiries, feel free to submit a message or reach out directly.
                         </p>
 
-                        <div class="space-y-4 pt-4">
+                        <div class="space-y-4 pt-4 glassmorphism">
                             <div class="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border">
                                 <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center text-brand-600 dark:text-brand-500">
                                     <i data-lucide="mail" class="w-5 h-5"></i>
                                 </div>
-                                <div>
-                                    <p class="text-xs text-gray-400">Direct Email</p>
-                                    <p class="text-sm font-mono text-gray-900 dark:text-white">agamkumar027@gmail.com</p>
-                                </div>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=agamkumar027%40gmail.com&cc=&bcc=&su=Subject%3A&body=Hello," target="_blank" rel="noopener noreferrer">
+                                    <div>
+                                        <p class="text-xs text-gray-400">Direct Email</p>
+                                        <p class="text-sm font-mono text-gray-900 dark:text-white">
+                                            agamkumar027@gmail.com</p>
+                                    </div>
+                                </a>
                             </div>
 
                             <div class="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border">
                                 <div class="w-10 h-10 rounded-lg bg-brand-cyan/10 flex items-center justify-center text-brand-cyan">
                                     <i data-lucide="map-pin" class="w-5 h-5"></i>
                                 </div>
-                                <div>
+                                <div class="glassmorphism">
                                     <p class="text-xs text-gray-400">Base Location: INDIA</p>
                                     <p class="text-sm text-gray-900 dark:text-white" id="current-time">Current Time</p>
                                 </div>
@@ -449,7 +414,7 @@
                     </div>
 
                     <!-- Interactive Form -->
-                    <div class="lg:col-span-7">
+                    <div class="lg:col-span-7 glassmorphism">
                         <div class="bg-gray-50 dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 sm:p-8">
                             <form action="https://api.web3forms.com/submit" method="POST" id="portfolio-contact-form" class="space-y-6">
                                 <input type="hidden" name="access_key" value="576ff943-a893-4b6b-b9c4-ee111d87efe2">
@@ -492,18 +457,19 @@
                 </div>
             </div>
         </section>
-    </main>
+        
+        <section class="panel bg-gray-100 dark:bg-dark-bg border-t border-gray-200 dark:border-dark-border py-8 text-xs text-gray-500 mt-auto"> 
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4"> 
+              <p>&copy; <span id="current-year"></span> Agam K. All rights reserved.</p> 
+              <div class="flex items-center space-x-6"> 
+                <a href="https://github.com/codeyy" target="_blank" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">GitHub</a> 
+                <a href="https://www.linkedin.com/in/agam-kumar-261939285/" target="_blank" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">LinkedIn</a> 
+                <a href="https://x.com/codeyy" target="_blank" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">X / Twitter</a> 
+              </div> 
+            </div> 
+        </section>
+    </main >
 
-    <footer class="bg-gray-100 dark:bg-dark-bg border-t border-gray-200 dark:border-dark-border py-8 text-xs text-gray-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>&copy; <span id="current-year"></span> Agam K. All rights reserved.</p>
-            <div class="flex items-center space-x-6">
-                <a href="https://github.com/codeyy" target="_blank" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">GitHub</a>
-                <a href="https://www.linkedin.com/in/agam-kumar-261939285" target="_blank" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">LinkedIn</a>
-                <a href="https://x.com" target="_blank" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">X / Twitter</a>
-            </div>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
