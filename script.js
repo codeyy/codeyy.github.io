@@ -219,8 +219,19 @@ document.addEventListener('keydown', function(event) {
 
 document.getElementById('terminal-form').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') {
+
+        const appology = "> Apologies, Terminal is yet to be fully implemented.";
+
         e.preventDefault(); // Stop default behavior if needed
-        this.submit();      // Submit the form programmatically
+        document.getElementById('terminal-welcome').style.display = 'none'; // Hide the welcome message
+        document.getElementById('terminal-output').style.display = ''; // Hide the welcome message
+        document.getElementById('terminal-output').textContent = appology; //document.getElementById('terminal-input').value;
+        document.getElementById('terminal-input').value = ''; // Clear the input field
+
+        setTimeout(() => {
+            document.getElementById('terminal-output').textContent = '';
+            document.getElementById('terminal-welcome').style.display = ''; // Show the welcome message again
+        }, 2000);
     }
 });
 
