@@ -184,3 +184,68 @@ function updateTime() {
         // Update the time immediately and then every second
         updateTime();
         setInterval(updateTime, 1000);
+
+
+document.addEventListener('keydown', function(event) { 
+    if ((event.key === 't' || event.key === 'T') && (event.altKey || event.metaKey)) { 
+        event.preventDefault(); 
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        syncThemeIcons();
+    } 
+});
+document.addEventListener('keydown', function(event) { 
+    if ((event.key === 'c' || event.key === 'C') && (event.altKey || event.metaKey)) { 
+        event.preventDefault(); 
+        const terminalSection = document.getElementById('interactive'); 
+        terminalSection.scrollIntoView({ behavior: 'smooth' });
+    } 
+});
+document.addEventListener('keydown', function(event) { 
+    if ((event.key === 's' || event.key === 'S') && (event.altKey || event.metaKey)) { 
+        event.preventDefault(); 
+        const skillsSection = document.getElementById('skills'); 
+        skillsSection.scrollIntoView({ behavior: 'smooth' });
+    } 
+});
+document.addEventListener('keydown', function(event) { 
+    if ((event.key === 'p' || event.key === 'P') && (event.altKey || event.metaKey)) { 
+        event.preventDefault(); 
+        const projectsSection = document.getElementById('projects'); 
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+    } 
+});
+
+document.getElementById('terminal-form').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault(); // Stop default behavior if needed
+        this.submit();      // Submit the form programmatically
+    }
+});
+
+
+
+const snowCount = 120; 
+// Target your specific section instead of the entire body
+const snowContainer = document.querySelector('.snow-section'); 
+
+for (let i = 0; i < snowCount; i++) { 
+    const snowflake = document.createElement('div'); 
+    snowflake.classList.add('snowflake'); 
+    
+    snowflake.textContent = String.fromCharCode(Math.random() * 100); // Snowflake character
+    
+    snowflake.style.left = Math.random() * 100 + "%"; 
+    snowflake.style.animationDuration = 5 + Math.random() * 5 + "s"; 
+    snowflake.style.fontSize = 8 + Math.random() * 10 + "px"; 
+    snowflake.style.animationDelay = Math.random() * 5 + "s"; 
+    snowflake.style.color = `rgba(0, ${Math.random() * 240}, 255, 0.9)`; 
+    snowflake.style.opacity = Math.random(); 
+    snowflake.style.zIndex = -1; 
+    
+    // Append to the section container
+    if (snowContainer) {
+        snowContainer.appendChild(snowflake); 
+    }
+}
