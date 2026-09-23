@@ -106,26 +106,53 @@ terminalForm.addEventListener('submit', (e) => {
     terminalBody.scrollTop = terminalBody.scrollHeight;
 });
 
-// Contact Form Interactivity
-const contactForm = document.getElementById('portfolio-contact-form');
-const formResponse = document.getElementById('form-response');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    formResponse.classList.remove('hidden', 'bg-red-500/10', 'text-red-600', 'dark:text-red-400');
-    formResponse.classList.add('bg-brand-500/10', 'text-brand-600', 'dark:text-brand-500', 'border', 'border-brand-500/20');
-    formResponse.textContent = '> Transmission received! Thank you for reaching out. I will respond promptly.';
-    contactForm.reset();
-});
-
-
+    //Contact Form Interactivity
 const form = document.getElementById('portfolio-contact-form');
 const submitBtn = document.getElementById('psf-submit-btn');
 const nameInput = document.getElementById('pcf-1');
 const emailInput = document.getElementById('pcf-2');
 const subjectInput = document.getElementById('pcf-3');
 const messageInput = document.getElementById('pcf-4');
+const formResponse = document.getElementById('form-response')
 
+form.addEventListener('submit', async function(e) {
+    e.preventDefault(); // Prevents the browser from redirecting
+    
+    const formData = new FormData(this);
+    
+    // Replace with your Formspark or Formspree endpoint URL
+    const endpoint = 'https://formspree.io/f/xoevwnwv'; 
+    
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData))
+      });
+      
+      if (response.ok) {
+        formResponse.classList.remove('hidden', 'bg-red-500/10', 'text-red-600', 'dark:text-red-400');
+        formResponse.classList.add('bg-brand-500/10', 'text-brand-600', 'dark:text-brand-500', 'border', 'border-brand-500/20');
+        formResponse.textContent = '> Transmission received! Thank you for reaching out. I will respond promptly.......';
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      alert('Error submitting form.');
+    }
+  });
+
+
+form.addEventListener('submit', (e) => {
+    formResponse.classList.remove('hidden', 'bg-red-500/10', 'text-red-600', 'dark:text-red-400');
+    formResponse.classList.add('bg-brand-500/10', 'text-brand-600', 'dark:text-brand-500', 'border', 'border-brand-500/20');
+    formResponse.textContent = '> Transmission received! Thank you for reaching out. I will respond promptly.';
+    contactForm.reset();
+});
 
 nameInput.addEventListener('input', () => {
     if(nameInput.value != '' && /^[A-Za-z\s]+$/.test(nameInput.value)) {
